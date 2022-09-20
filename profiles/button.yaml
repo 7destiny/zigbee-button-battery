@@ -15,19 +15,19 @@ metadata:
   vid: "19f4de8f-409a-30b1-9b39-1daf07e9f13b"
       
  preferences:
-  - title: "모드"
+  - title: "Mode"
     description: "SCENE MODE unicasts zigbee messages allowing providing interface to automate button-specific events. DIMMER MODE broadcasts messages within the Zigbee groups allowing quicker device response (Note: Events may not propagate through the ecosystem)"
     required: true
     name: operationMode
     preferenceType: enumeration
     definition:
       options:
-        SCENE: "Scene"
-        DIMMER: "Dimmer"
+        SCENE: "Scene Mode"
+        DIMMER: "Dimmer Mode"
       default: "SCENE"
 
-  - title: "그룹"
-    description: "DIMMER 전용 그룹"
+  - title: "Group"
+    description: "Zigbee Group for broadcast Zigbee commands (Note: this is an exclusive option for DIMMER MODE and make sure other devices are within same Group)"
     name: zigbeeGroup
     preferenceType: integer
     definition:
@@ -35,8 +35,8 @@ metadata:
       minimum: 0
       maximum: 65535
 
-  - title: "업데이트시 그룹 재설정"
-    description: "연결된 그룹을 유지하거나 재설정된 그룹에서 장치를 제거하도록 결정할 수 있습니다."
+  - title: "Override Group On Update"
+    description: "With this option you can decide either to keep the associated Zigbee Group or remove device from the Group(s) on the \"Group\" has been redefined."
     name: overrideGroupOnUpdate
     preferenceType: boolean
     definition:
