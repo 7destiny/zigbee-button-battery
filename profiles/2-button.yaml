@@ -1,0 +1,22 @@
+name: 2-button
+components:
+  - id: main
+    capabilities:
+      - id: button
+        version: 1
+    categories:
+      - name: RemoteController
+
+  - id: button2
+    capabilities:
+      - id: button
+        version: 1
+    categories:
+      - name: RemoteController
+
+metadata:
+  deviceType: RemoteController
+  ocfDeviceType: x.com.st.d.remotecontroller
+  deviceTypeId: RemoteController
+  mnmn: "SmartThingsCommunity"
+  vid: "285bea81-b084-3757-bc45-2757ca2aacd2"
