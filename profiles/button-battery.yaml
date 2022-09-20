@@ -25,19 +25,19 @@ metadata:
   vid: "173a6dcd-4d36-3aa9-847c-bfdeddf658db"
 
 preferences:
-  - title: "모드"
-    description: "SCENE MODE unicasts zigbee messages allowing providing interface to automate button-specific events. DIMMER MODE broadcasts messages within the Zigbee groups allowing quicker device response (Note: Events may not propagate through the ecosystem)"
+  - title: "Mode"
+    description: "On SCENE MODE device will unicast button events. On DIMMER MODE device will broadcast messages within the Zigbee group (Warning: Events won't propagate the ecosystem, only the Zigbee network)"
     required: true
     name: operationMode
     preferenceType: enumeration
     definition:
       options:
-        SCENE: "Scene"
-        DIMMER: "Dimmer"
+        SCENE: "Scene Mode"
+        DIMMER: "Dimmer Mode"
       default: "SCENE"
 
-  - title: "그룹"
-    description: "DIMMER 전용 그룹"
+  - title: "Group"
+    description: "Zigbee Group for broadcast Zigbee commands Note: this is an exclusive option for DIMMER MODE and make sure other devices are within same Group."
     name: zigbeeGroup
     preferenceType: integer
     definition:
@@ -45,15 +45,15 @@ preferences:
       minimum: 0
       maximum: 65535
 
-  - title: "업데이트시 그룹 재설정"
-    description: "연결된 그룹을 유지하거나 재설정된 그룹에서 장치를 제거하도록 결정할 수 있습니다."
+  - title: "Override Group On Update"
+    description: "With this option you can decide either to keep the associated Zigbee Group or remove device from the Group(s) on the \"Group\" has been redefined."
     name: overrideGroupOnUpdate
     preferenceType: boolean
     definition:
       default: true
 
-  - title: "DIMMER mode시 레벨 단계"
-    description: "레벨 단계 인디게이터(DIMMER mode 전용)"
+  - title: "Level Step (on dimmer mode)"
+    description: "Level step indicator (dimmer mode exclusive feature)"
     name: levelStep
     preferenceType: integer
     definition:
