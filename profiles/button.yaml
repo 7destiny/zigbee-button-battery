@@ -1,0 +1,43 @@
+name: button
+components:
+  - id: main
+    capabilities:
+      - id: button
+        version: 1
+    categories:
+      - name: RemoteController
+
+metadata:
+  deviceType: RemoteController
+  ocfDeviceType: x.com.st.d.remotecontroller
+  deviceTypeId: RemoteController
+  mnmn: "SmartThingsCommunity"
+  vid: "19f4de8f-409a-30b1-9b39-1daf07e9f13b"
+      
+ preferences:
+  - title: "모드"
+    description: "SCENE MODE unicasts zigbee messages allowing providing interface to automate button-specific events. DIMMER MODE broadcasts messages within the Zigbee groups allowing quicker device response (Note: Events may not propagate through the ecosystem)"
+    required: true
+    name: operationMode
+    preferenceType: enumeration
+    definition:
+      options:
+        SCENE: "Scene"
+        DIMMER: "Dimmer"
+      default: "SCENE"
+
+  - title: "그룹"
+    description: "DIMMER 전용 그룹"
+    name: zigbeeGroup
+    preferenceType: integer
+    definition:
+      default: 0
+      minimum: 0
+      maximum: 65535
+
+  - title: "업데이트시 그룹 재설정"
+    description: "연결된 그룹을 유지하거나 재설정된 그룹에서 장치를 제거하도록 결정할 수 있습니다."
+    name: overrideGroupOnUpdate
+    preferenceType: boolean
+    definition:
+      default: true
