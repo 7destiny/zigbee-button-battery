@@ -1,0 +1,35 @@
+name: 3-button-battery
+components:
+  - id: main
+    capabilities:
+      - id: button
+        version: 1
+    categories:
+      - name: RemoteController
+
+  - id: button2
+    capabilities:
+      - id: button
+        version: 1
+    categories:
+      - name: RemoteController
+
+  - id: button3
+    capabilities:
+      - id: button
+        version: 1
+    categories:
+      - name: RemoteController
+
+  - id: battery
+    capabilities:
+      - id: battery
+        version: 1
+    categories:
+      - name: RemoteController
+metadata:
+  deviceType: RemoteController
+  ocfDeviceType: x.com.st.d.remotecontroller
+  deviceTypeId: RemoteController
+  mnmn: "SmartThingsCommunity"
+  vid: "ced4d185-00cd-34cf-85af-b73529c26965"
