@@ -1,4 +1,4 @@
-name: "zigbee-button-battery-v1.0.1"
-packageKey: "zigbee-button-battery-v1.0.1"
+name: "zigbee-button-battery-v1.0.2"
+packageKey: "zigbee-button-battery-v1.0.2"
 permissions:
   zigbee: {}
