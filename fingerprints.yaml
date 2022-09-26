@@ -89,14 +89,14 @@ zigbeeManufacturer:
     model: "TS004F"
     deviceProfileName: button-battery
     
-  ## MOES 2-Button Scene Switch
+  # MOES 2-Button Scene Switch
   - id: "_TZ3000_h1c2eamp/TS0042"
     deviceLabel: "Scene Switch"
     manufacturer: "_TZ3000_h1c2eamp"
     model: "TS0042"
     deviceProfileName: 2-button-battery
     
-  ## MOES 3-Button Scene Switch
+  # MOES 3-Button Scene Switch
   - id: "_TZ3000_w4thianr/TS0043"
     deviceLabel: "Scene Switch"
     manufacturer: "_TZ3000_w4thianr"
