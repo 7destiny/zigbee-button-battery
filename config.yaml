@@ -1,4 +1,4 @@
-name: "zigbee-button-battery-temporary version"
-packageKey: "zigbee-button-battery-temporary version"
+name: "zigbee-button-battery"
+packageKey: "zigbee-button-temporary version"
 permissions:
   zigbee: {}
